@@ -1,0 +1,28 @@
+
+import java.util.Scanner;
+class intToRoman {
+    public String intToRoman(int num) {
+        int value[]={
+            1000,900,500,400,100,90,50,40,10,9,5,4,1};
+        String symbols[]={
+            "M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
+        StringBuilder result=new StringBuilder();
+        for(int i=0;i<value.length;i++){        
+            while(num >=value[i]){
+                result.append(symbols[i]);    
+                 num-=value[i];
+        }
+        }
+        return result.toString();
+        }
+        public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            System.out.print("Enter number: ");
+            int num= sc.nextInt();
+            intToRoman s= new intToRoman();
+            String res=s.intToRoman(num);
+            System.out.println("Roman Numeral: " + res);
+
+        }
+        }
+    
