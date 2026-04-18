@@ -1,0 +1,15 @@
+public class ConsonantCount {
+    public static void main(String[] args) {
+        String str = "hello";
+        int count = 0;
+
+        for(int i=0;i<str.length();i++){
+            char ch = str.charAt(i);
+            if(Character.isLetter(ch) && "aeiouAEIOU".indexOf(ch)==-1){
+                count++;
+            }
+        }
+
+        System.out.println("Consonants = " + count);
+    }
+}
