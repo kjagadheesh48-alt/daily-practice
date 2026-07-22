@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  db:
+    image: mongo:latest
+    container_name: railguardian-db
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  ai-service:
+    build:
+      context: ./ai-services
+    container_name: railguardian-ai
+    restart: always
+    ports:
+      - "8000:8000"
+
+  backend:
+    build:
+      context: ./backend
+    container_name: railguardian-backend
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - MONGO_URI=mongodb://db:27017/railguardian
+      - JWT_SECRET=super-secret-railguardian-key
+    depends_on:
+      - db
+      - ai-service
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: railguardian-frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:5000
+      - NEXT_PUBLIC_WS_URL=ws://localhost:5000
+    depends_on:
+      - backend
+
+volumes:
+  mongo-data:
