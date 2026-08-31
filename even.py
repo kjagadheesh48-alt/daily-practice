@@ -1,4 +1,5 @@
-def check(n):
-    print("Even" if n % 2 == 0 else "Odd")
-
-check(8)
+n=int(input("Enter a number"))
+if(n%2==0):
+    print("EVEN")
+else:
+    print("ODD")
