@@ -1,0 +1,13 @@
+class Solution:
+    def plusOne(self, digits: list[int]) -> list[int]:
+        lastind = len(digits) - 1
+
+        while lastind >= 0:
+            if digits[lastind] != 9:
+                digits[lastind] += 1
+                return digits
+
+            digits[lastind] = 0
+            lastind -= 1
+
+        return [1] + digits
