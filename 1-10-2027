@@ -1,0 +1,9 @@
+S = input()
+S1 = input()
+
+for ch in S1:
+    if ch not in S:
+        print("NO")
+        break
+else:
+    print("YES")
