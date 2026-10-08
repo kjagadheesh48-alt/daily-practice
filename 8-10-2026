@@ -1,0 +1,5 @@
+temperature = 28  
+if temperature > 30:
+    print("It's a hot day! Stay hydrated.")
+else:
+    print("The temperature is pleasant.")
