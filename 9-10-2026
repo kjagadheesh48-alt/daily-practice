@@ -1,0 +1,5 @@
+light = int(input("Enter 1 for ON or 0 for OFF: "))
+if light == 1:
+    print("Light is ON 💡")
+else:
+    print("Light is OFF")
