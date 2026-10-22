@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class linearSearch{
+    public static void main(String[] args){
+        int [] arr={1,2,3,4,5,6,7,8,9,10};
+        int n= arr.length;
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter the element to find in to search");
+        int a= scan.nextInt();
+        int t=0;
+        for(int i=0;i<n;i++){
+            if(arr[i]==a){
+                System.out.println("Got the element "+arr[i]);
+                System.out.println("The index of the element"+i);
+                t=1;
+                break;
+            }
+        }
+        if(t==0){
+        System.out.println("ELEMENT NOT FOUND");
+        }
+    }
+    }
