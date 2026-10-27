@@ -1,0 +1,12 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class QueuePushExample {
+    public static void main(String[] args) {
+        Queue<String> queue = new LinkedList<>();
+
+        queue.offer("First Item");
+        queue.offer("Second Item");
+        queue.add("Third Item");
+    }
+}
