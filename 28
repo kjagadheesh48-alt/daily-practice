@@ -1,0 +1,21 @@
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+class main{
+    public static void main(String[] args){
+        Queue<Integer> q = new LinkedList<>();
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Number of element in the queue");
+        int a=scan.nextInt();
+        for(int i=0;i<=a;i++){
+            System.out.println("THE ELEMENT THAT HAVE TO BE ADD IN QUEUE");
+            int b=scan.nextInt();
+            q.offer(b);
+
+        }
+        System.out.println(q);
+        q.poll();
+        System.out.println(q);
+
+    }
+}
