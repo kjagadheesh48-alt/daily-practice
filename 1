@@ -1,0 +1,55 @@
+
+<html>
+<head>
+<title>Railway Reservation</title>
+<style>
+body {
+    background-color: lightblue;
+    text-align: center;
+}
+.box {
+    background-color: white;
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h2>Railway Ticket Reservation</h2>
+
+<input type="text" id="name" placeholder="Passenger Name"><br><br>
+
+<input type="text" id="from" placeholder="From"><br><br>
+
+<input type="text" id="to" placeholder="To"><br><br>
+
+<input type="number" id="age" placeholder="Age"><br><br>
+
+<button onclick="book()">Book Ticket</button>
+
+<p id="result"></p>
+</div>
+
+<script>
+function book() {
+    var name = document.getElementById("name").value;
+    var from = document.getElementById("from").value;
+    var to = document.getElementById("to").value;
+    var age = document.getElementById("age").value;
+
+    if (name == "" || from == "" || to == "" || age == "") {
+        document.getElementById("result").innerHTML = "Fill all details";
+    }
+    else {
+        document.getElementById("result").innerHTML =
+        "Ticket Booked Successfully!";
+    }
+}
+</script>
+
+</body>
+</html>
