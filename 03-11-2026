@@ -1,0 +1,82 @@
+
+<html>
+<head>
+<title>Bank Login</title>
+
+<style>
+body {
+    background-color: lightblue;
+    text-align: center;
+    font-family: Arial;
+}
+
+.box {
+    background-color: white;
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px;
+}
+
+button {
+    background-color: blue;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Bank Login</h2>
+
+<input type="text" id="user"
+placeholder="Customer ID"><br>
+
+<input type="password" id="pass"
+placeholder="Password"><br>
+
+<button onclick="login()">Login</button>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+
+function login() {
+
+    var u = document.getElementById("user").value;
+    var p = document.getElementById("pass").value;
+
+    if (u == "" || p == "") {
+        document.getElementById("result").innerHTML =
+        "Please fill all fields";
+    }
+
+    else if (u.length != 10) {
+        document.getElementById("result").innerHTML =
+        "Customer ID must be 10 digits";
+    }
+
+    else if (p.length < 8) {
+        document.getElementById("result").innerHTML =
+        "Password must contain 8 characters";
+    }
+
+    else {
+        document.getElementById("result").innerHTML =
+        "Login Successful";
+    }
+}
+
+</script>
+
+</body>
+</html>
