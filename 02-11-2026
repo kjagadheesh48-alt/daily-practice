@@ -1,0 +1,25 @@
+<html>
+<body>
+
+<h2>Email Validation</h2>
+
+<input type="text" id="email" placeholder="Enter Email">
+<button onclick="check()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function check() {
+    var e = document.getElementById("email").value;
+
+    if (/^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/.test(e)) {
+        document.getElementById("result").innerHTML = "Valid Email";
+    }
+    else {
+        document.getElementById("result").innerHTML = "Invalid Email";
+    }
+}
+</script>
+
+</body>
+</html>
