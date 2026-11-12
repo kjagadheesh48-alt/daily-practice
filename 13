@@ -1,0 +1,14 @@
+<form>
+  <fieldset>
+    <legend>Select your preferred contact method:</legend>
+
+    <input type="radio" id="email" name="contact" value="email" checked>
+    <label for="email">Email</label><br>
+
+    <input type="radio" id="phone" name="contact" value="phone">
+    <label for="phone">Phone</label><br>
+
+    <input type="radio" id="mail" name="contact" value="mail">
+    <label for="mail">Postal Mail</label>
+  </fieldset>
+</form>
