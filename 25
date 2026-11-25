@@ -1,0 +1,22 @@
+
+S = ['Sunny', 'Warm', 'Normal']
+G = ['?', '?', '?']
+
+data = [
+    (['Sunny', 'Warm', 'Normal'], 'Yes'),
+    (['Sunny', 'Cold', 'Normal'], 'Yes'),
+    (['Rainy', 'Cold', 'High'], 'No')
+]
+
+for x, y in data:
+    if y == 'Yes':
+        for i in range(3):
+            if S[i] != x[i]:
+                S[i] = '?'
+    else:
+        for i in range(3):
+            if S[i] != x[i]:
+                G[i] = S[i]
+
+print("S =", S)
+print("G =", G)
